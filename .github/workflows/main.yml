@@ -1,0 +1,23 @@
+name: infra-terraform
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run echo
+        run: echo "Hello from GitHub Actions!"
+      - name: Build Terraform
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          path: .terraform
