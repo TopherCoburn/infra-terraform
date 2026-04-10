@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "timestamp": "2024-10-27T10:30:00Z",
+  "service": "infra-terraform",
+  "environment": "production",
+  "version": "1.2.3",
+  "dependencies": {
+    "terraform": {
+      "version": "1.5.0",
+      "status": "ok"
+    },
+    "aws": {
+      "status": "ok",
+      "region": "us-east-1"
+    }
+  },
+  "metrics": {
+    "cpu_usage": 0.15,
+    "memory_usage": 0.60,
+    "disk_usage": 0.30
+  },
+  "custom_data": {
+    "terraform_state_bucket": "my-terraform-state-bucket",
+    "terraform_lock_table": "my-terraform-lock-table"
+  }
+}
